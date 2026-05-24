@@ -1,0 +1,109 @@
+.person-part{
+    width:100%;
+    max-width: 300px;
+    background-color: var(--person-lower-part-color);
+    border-radius: var(--commponent-border-radius);
+}
+.person-part-upper-part{
+    padding:var(--person-padding-mobile);
+    
+    border-radius: var(--commponent-border-radius);
+    background-color: var(--person-upper-part-color);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.person-part-inner-container{
+ width:100%;
+ gap:2rem;
+ display:flex;
+ align-items: center;
+}
+.person-part-p-h-part{
+    flex:2;
+    gap:1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.person-part-p-h-part p{
+    font-size:clamp(0.8rem, 1vw, 1rem);
+    color:var(--component-hell-text-color);
+    font-weight: 400;
+}
+.person-part-p-h-part h1{
+    font-size:clamp(1.8rem, 4vw, 2rem);
+    line-height: 1.1;
+    color:white;
+    font-weight: 300;
+}
+.img-part{
+    width:clamp(4.5rem,8vw,7rem);
+    height:clamp(4.5rem,8vw,7rem);
+    /*height:7rem;*/
+    flex-shrink:0;
+    
+    padding:0;
+    margin:0;
+    border-radius: 50%;
+    border:5px solid white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.person-part-lower-part{
+    border-radius: var(--commponent-border-radius);
+    background-color: var(--person-lower-part-color);
+    padding-left:var(--person-padding);
+    padding-right:var(--person-padding);
+    display:flex;
+    justify-content: space-between; 
+    align-items: center;   
+}
+.person-part-lower-part h2{
+ font-size:clamp(1.2rem, 3vw, 1.4rem);
+ font-weight: 400;
+ cursor:pointer;
+}
+.blue-text{
+  color:var(--component-hell-text-color);
+}
+.white-text{
+  color:white;
+} 
+@media(min-width:1000px){
+    .person-part{
+        max-width: none;
+        grid-row:1/3;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .person-part-upper-part{
+        padding:var(--person-padding-desktop);
+        flex:2;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap:1rem;
+    }
+    .person-part-lower-part{
+        padding-top:1rem;
+        padding-bottom:1rem;
+
+        flex-direction:column;
+        align-items:flex-start;
+
+        gap:1rem;
+    }
+    .person-part-inner-container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .person-part-lower-part{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        
+    }
+}

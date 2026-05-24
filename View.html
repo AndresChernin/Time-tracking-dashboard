@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time tracking dashboard</title>
+    
+    <link rel="stylesheet" href="styles-for-person-container.css">
+    <link rel="stylesheet" href="styles-for-main-container.css">
+    <link rel="stylesheet" href="styles-for-activity-container.css">
+    <!--<link rel="stylesheet" href="styles-for-activity-component.css">-->
+    
+    
+  
+    <link href=
+    "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" 
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;800;900&display=swap"
+ rel="stylesheet">
+    
+  </head>
+  <body>
+    
+    <div id="root"></div>
+    
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    
+    
+    <script src="PersonComponent.jsx" type="text/babel"></script>
+    <script src="PersonComponent2.jsx" type="text/babel"></script>
+    <script src="ActivityComponent.jsx" type="text/babel"></script>
+    <script src="data.js"></script>
+    <!--/*<script src="MiddleComponent.jsx" type="text/babel"></script>
+    <script src="LowerComponent.jsx" type="text/babel"></script>
+    <script src="SuccessComponent.jsx" type="text/babel"></script>
+    <script src="ValidationModel.mjs"></script>*/}-->
+    <script type="text/babel">
+      
+
+
+       function App(){
+       const[typeOfActivity,setTypeOfActivity]=React.useState("weekly");      
+       const [resetCounter, setResetCounter]=React.useState(0);
+       const imageMap = {
+           Work: "./images/icon-work.svg",
+           Play: "./images/icon-play.svg",
+           Study: "./images/icon-study.svg",
+           Exercise: "./images/icon-exercise.svg",
+           Social: "./images/icon-social.svg",
+          "Self Care": "./images/icon-self-care.svg"
+}
+     const colorsMap={
+           Work: "work-color",
+           Play: "play-color",
+           Study: "study-color",
+           Exercise: "exercise-color",
+           Social: "social-color",
+          "Self Care": "self-care-color"
+     }
+        
+     function handleTypeChange(newType){
+      setTypeOfActivity(newType);
+      setResetCounter(prev=>prev+1);
+     }
+        return(
+          <main className={"main-container"} >
+            <PersonComponent2 img_link="./images/image-jeremy.png" 
+            typeOfActivity={typeOfActivity}
+            setTypeOfActivity={handleTypeChange}/>
+            {data.map((activity) => (
+            <ActivityComponent img_link={imageMap[activity.title]}
+            img_elli="./images/icon-ellipsis.svg"
+            
+            key={activity.title}
+            title={activity.title}
+           
+            color={colorsMap[activity.title]}
+            typeOfActivity={typeOfActivity}
+            activityData={activity}
+            resetCounter={resetCounter}/>
+             ))}
+          </main>
+         )      
+         
+       }
+      const container = document.querySelector('#root');
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

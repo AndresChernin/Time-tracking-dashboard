@@ -1,0 +1,115 @@
+:root{
+     --p-size:18px;
+    /*mobile:paddings,gaps*/
+    --padding-mobile-top:3rem;
+    --padding-mobile-bottom:3rem;
+    --padding-mobile-left:0.5rem;
+    --padding-mobile-rigth:0.5rem;
+    --mobile-main-container-gap:3rem;
+
+    --person-padding-mobile:1.5rem;
+    --person-padding-desktop:1rem;
+
+    /*descktop:paddings,gaps*/
+    --padding-desktop-top:5rem;
+    --padding-desktop-bottom:5rem;
+    --padding-desktop-left:2rem;
+    --padding-desktop-rigth:2rem;
+    --grid-container-gap:1rem;
+    /*person:paddings,gaps*/
+    --person-padding:3rem;
+    /*activity:padding,gaps*/
+    --activity-padding-left:2rem;
+    --activity-padding-right:2rem;
+    --activity-padding-top:3rem;
+    --activity-padding-bottom:3rem;
+
+    /*border radius*/
+   --image-border-radius:50%;
+   --commponent-border-radius:2.5rem;
+ 
+  /*colors*/
+  --body-background-color:hsl(226, 43%, 10%);
+  --person-lower-part-color:hsl(235, 46%, 20%);
+  --person-upper-part-color:hsl(235, 45%, 61%);
+  --component-dark-text-color:hsl(236, 46%, 41%);
+  --component-hell-text-color:hsl(236, 100%, 87%);
+  
+
+  --activity-lower-part-color:hsl(235, 46%, 20%);
+  --activity-work-color:hsl(15, 100%, 70%);
+  --activity-play-color:hsl(195, 74%, 62%);
+  --activity-study-color:hsl(348, 100%, 68%);
+  --activity-exercise-color:hsl(145, 58%, 55%);
+  --activity-social-color:hsl(264, 64%, 52%);
+  --activity-self-care-color:hsl(43, 84%, 65%);
+
+}
+html,body{
+  margin:0;
+  padding:0;
+  min-height:100vh;
+  height:auto;
+  background-color: var(--body-background-color);
+  font-family: Rubik;
+  padding-bottom: 5rem;
+}
+p,h1{
+  padding:0;
+  margin:0;
+}
+#root{
+  min-height:100vh;
+  margin:0
+}
+.main-container{
+  width:100%;
+  box-sizing: border-box;
+  padding-left:var(--padding-mobile-left);
+  padding-right:var(--padding-mobile-rigth);
+  padding-top:var(--padding-mobile-top);
+  padding-bottom: var(--padding-mobile-bottom);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:var(--mobile-main-container-gap);
+}
+.blue-text{
+  color:var(--component-hell-text-color);
+}
+.white-text{
+  color:white;
+}
+.work-color{
+  background-color: var(--activity-work-color);
+}
+.play-color{
+  background-color: var(--activity-play-color);
+}
+.study-color{
+  background-color: var(--activity-study-color);
+}
+.exercise-color{
+  background-color: var(--activity-exercise-color);
+}
+.social-color{
+  background-color: var(--activity-social-color);
+}
+.self-care-color{
+  background-color: var(--activity-self-care-color);
+}
+
+@media(min-width:1000px){
+  .main-container{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2, auto);
+    gap:var(--grid-container-gap);
+  }
+  h2{
+    padding:0;
+    margin:0;
+  }
+
+}

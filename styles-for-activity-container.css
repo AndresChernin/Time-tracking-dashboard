@@ -1,0 +1,97 @@
+.activity-part{
+    width:100%;
+    max-width: 400px;
+    /*background-color: var(--activity-work-color);*/
+    border-radius: var(--commponent-border-radius);
+    
+}
+.activity-part-upper-part{
+    height:4rem;
+    padding-right:var(--activity-padding-right);
+    display:flex;
+    justify-content: flex-end;
+
+    overflow:hidden;
+}
+.activity-img-part{
+    width:8rem;
+    height:8rem;
+    transform:translateY(-1rem);
+}
+.activity-part-lower-part{
+    border-radius: var(--commponent-border-radius);
+    background-color: var(--activity-lower-part-color);
+    padding:var(--person-padding-mobile);
+    
+}
+.lower-part-inner-part{
+    height:60%;
+    display:flex;
+    justify-content: space-between;
+}
+.lower-part-left{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.fat-white-p{
+    color:white;
+    font-weight: 500;
+    font-size:clamp(1rem,1.5vw,1.4rem);
+}
+.big-white-p{
+    color:white;
+    font-weight:300;
+    font-size: clamp(2.5rem,3.5vw,3rem);
+}
+.lower-part-right{
+    position:relative;
+    box-sizing: border-box;
+    padding-top:0.5rem;
+    padding-bottom: 1rem;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.ellipsis-part{
+    cursor: pointer;
+}
+.menu-part{
+    position:absolute;
+    margin-top:0.5rem;
+    padding:1rem;
+    border-radius: 1rem;
+    background-color:var(--person-upper-part-color);
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+.menu-part p{
+    margin:0;
+    font-weight: 400;
+    cursor:pointer;
+}
+.menu-part .blue-text{
+    color:var(--component-hell-text-color);
+}
+.desktop-last-text{
+    display:none;
+}
+@media(min-width:1000px){
+    .activity-part{
+        max-width: none;
+    }
+    .mobile-last-text{
+        display:none;
+    }
+    .desktop-last-text{
+    display:block;
+    }
+    .lower-part-left{
+        gap:1rem;
+    }
+    .lower-part-right{
+        justify-content: flex-start;
+    }
+}

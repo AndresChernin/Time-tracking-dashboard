@@ -27,36 +27,63 @@ function ActivityComponent({img_link, img_elli, title,color,
                           </p>
                       </div>
                       <div className="lower-part-right">
+                        <button
+                          type="button"
+                          className="ellipsis-button"
+                          onClick={() => setShowMenu(!showMenu)}
+                          aria-label={`Open ${title} activity menu`}
+                          aria-expanded={showMenu}
+                          aria-haspopup="true">
                          <img 
                             src={img_elli} 
                             className="ellipsis-part"  
                             alt="image of ellipsis"
-                            onClick={()=>setShowMenu(!showMenu)}
+                           
                          />
+                         </button>
 
                 {showMenu && (
                   <div className="menu-part">
-                    <p className={activeType==="daily"? "white-text" : "blue-text"}
-                    onClick={() => {
-                                    setLocalType("daily");
-                                    setShowMenu(false);
-                                  }}>
-                       Daily
-                    </p>
-                    <p className={activeType==="weekly"? "white-text" : "blue-text"}
-                       onClick={() => {
-                                       setLocalType("weekly");
-                                       setShowMenu(false);
-                                }}>
-                       Weekly
-                    </p>
-                    <p className={activeType==="monthly"? "white-text" : "blue-text"} 
-                    onClick={() => {
-                                    setLocalType("monthly");
-                                    setShowMenu(false);
-                                }}>
-                        Monthly
-                    </p>
+                    <button 
+                      type="button"
+                 className={`menu-part-button ${
+        activeType === "daily" ? "white-text" : "blue-text"
+    }`}
+    onClick={() => { 
+        setLocalType("daily"); 
+        setShowMenu(false); 
+    }}
+    aria-pressed={activeType === "daily"}
+>
+    Daily
+</button>
+                   
+                    <button 
+                      type="button"
+                 className={`menu-part-button ${
+        activeType === "weekly" ? "white-text" : "blue-text"
+    }`}
+    onClick={() => { 
+        setLocalType("weekly"); 
+        setShowMenu(false); 
+    }}
+    aria-pressed={activeType === "weekly"}
+>
+    Weekly
+</button>
+                    <button 
+                      type="button"
+                 className={`menu-part-button ${
+        activeType === "monthly" ? "white-text" : "blue-text"
+    }`}
+    onClick={() => { 
+        setLocalType("monthly"); 
+        setShowMenu(false); 
+    }}
+    aria-pressed={activeType === "monthly"}
+>
+    Monthly
+</button>
                   </div>
                 )
                 }   

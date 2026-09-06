@@ -1,4 +1,4 @@
-function PersonComponent2({img_link,typeOfActivity,setTypeOfActivity}){
+function ProfileCard({img_link,typeOfActivity,setTypeOfActivity}){
     return(
 
         <article className="person-part">

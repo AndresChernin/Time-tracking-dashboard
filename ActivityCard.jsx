@@ -1,4 +1,4 @@
-function ActivityComponent({img_link, img_elli, title,color,
+function ActivityCard({img_link, img_elli, title,color,
                             typeOfActivity,activityData,resetCounter}){
         const[showMenu, setShowMenu]=React.useState(false);
         const [localType, setLocalType] = React.useState(null);

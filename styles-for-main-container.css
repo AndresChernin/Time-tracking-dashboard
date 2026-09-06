@@ -54,9 +54,14 @@ html,body{
   font-family: Rubik;
   padding-bottom: 5rem;
 }
-p,h1{
+p,h1,button{
   padding:0;
   margin:0;
+}
+button{
+  border:none;
+  background:none;
+  cursor:pointer
 }
 #root{
   min-height:100vh;

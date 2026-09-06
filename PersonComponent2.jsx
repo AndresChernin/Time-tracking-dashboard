@@ -12,16 +12,33 @@ function PersonComponent2({img_link,typeOfActivity,setTypeOfActivity}){
               </div>
             </div>
             <div className="person-part-lower-part">
-              
-                <h2 className={typeOfActivity==="daily"? "white-text" : "blue-text"}
-                onClick={()=>setTypeOfActivity("daily")}>
-                    Daily</h2>
-                <h2 className={typeOfActivity==="weekly"? "white-text" : "blue-text"}
-                onClick={()=>setTypeOfActivity("weekly")}>
-                    Weekly</h2>
+              <button
+                    type="button"
+                    onClick={() => setTypeOfActivity("daily")}
+                    aria-pressed={typeOfActivity === "daily"}>
+                    <h2 className={typeOfActivity==="daily"? "white-text" : "blue-text"}
+                       onClick={()=>setTypeOfActivity("daily")}>
+                    Daily
+                   </h2>
+              </button>  
+               <button
+                    type="button"
+                    onClick={() => setTypeOfActivity("weekly")}
+                    aria-pressed={typeOfActivity === "weekly"}>
+                     <h2 className={typeOfActivity==="weekly"? "white-text" : "blue-text"}
+                        onClick={()=>setTypeOfActivity("weekly")}>
+                        Weekly
+                    </h2>
+                    </button>   
+                <button
+                    type="button"
+                    
+                    onClick={() => setTypeOfActivity("monthly")}
+                    aria-pressed={typeOfActivity === "monthly"}>
                 <h2 className={typeOfActivity==="monthly"? "white-text" : "blue-text"}
                 onClick={()=>setTypeOfActivity("monthly")}>
                     Monthly</h2>
+                </button>
             </div>
              
             

@@ -19,7 +19,8 @@ function ActivityComponent({img_link, img_elli, title,color,
             </div>
             <div className="activity-part-lower-part">
               <div className="lower-part-inner-part">
-                      <div className="lower-part-left">
+                      <div className="lower-part-left"
+                            aria-live="polite">
                           <p className="fat-white-p">{title}</p>
                           <p className="big-white-p">{localCurrent}hrs</p>
                           <p className="blue-text desktop-last-text">

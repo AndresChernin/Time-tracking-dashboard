@@ -32,8 +32,8 @@
     
     
     
-    <script src="PersonComponent2.jsx" type="text/babel"></script>
-    <script src="ActivityComponent.jsx" type="text/babel"></script>
+    <script src="ProfileCard.jsx" type="text/babel"></script>
+    <script src="ActivityCard.jsx" type="text/babel"></script>
     <script src="data.js"></script>
     
     <script type="text/babel">
@@ -66,11 +66,11 @@
      }
         return(
           <main className={"main-container"} >
-            <PersonComponent2 img_link="./images/image-jeremy.png" 
+            <ProfileCard img_link="./images/image-jeremy.png" 
             typeOfActivity={typeOfActivity}
             setTypeOfActivity={handleTypeChange}/>
             {data.map((activity) => (
-            <ActivityComponent img_link={imageMap[activity.title]}
+            <ActivityCard img_link={imageMap[activity.title]}
             img_elli="./images/icon-ellipsis.svg"
             
             key={activity.title}

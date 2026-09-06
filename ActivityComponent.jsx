@@ -32,8 +32,8 @@ function ActivityComponent({img_link, img_elli, title,color,
                           className="ellipsis-button"
                           onClick={() => setShowMenu(!showMenu)}
                           aria-label={`Open ${title} activity menu`}
-                          aria-expanded={showMenu}
-                          aria-haspopup="true">
+                          aria-expanded={showMenu}>
+                          
                          <img 
                             src={img_elli} 
                             className="ellipsis-part"  

@@ -70,6 +70,10 @@
 }
 .white-text{
   color:white;
+}
+.person-part-button{
+    font-weight: 400;
+    font-size:22px;
 } 
 @media(min-width:1000px){
     .person-part{

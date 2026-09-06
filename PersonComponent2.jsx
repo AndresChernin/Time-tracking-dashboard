@@ -15,11 +15,13 @@ function PersonComponent2({img_link,typeOfActivity,setTypeOfActivity}){
               <button
                     type="button"
                     onClick={() => setTypeOfActivity("daily")}
-                    aria-pressed={typeOfActivity === "daily"}>
-                    <h2 className={typeOfActivity==="daily"? "white-text" : "blue-text"}
-                       onClick={()=>setTypeOfActivity("daily")}>
+                    aria-pressed={typeOfActivity === "daily"}
+                    className={`person-part-button ${
+                                  typeOfActivity==="daily"? "white-text" : "blue-text"
+                                 }`}>
+                  
                     Daily
-                   </h2>
+                   
               </button>  
                <button
                     type="button"

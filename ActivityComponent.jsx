@@ -46,17 +46,16 @@ function ActivityComponent({img_link, img_elli, title,color,
                   <div className="menu-part">
                     <button 
                       type="button"
-                 className={`menu-part-button ${
-        activeType === "daily" ? "white-text" : "blue-text"
-    }`}
-    onClick={() => { 
-        setLocalType("daily"); 
-        setShowMenu(false); 
-    }}
-    aria-pressed={activeType === "daily"}
->
-    Daily
-</button>
+                      className={`menu-part-button ${
+                          activeType === "daily" ? "white-text" : "blue-text"
+                       }`}
+                      onClick={() => { 
+                      setLocalType("daily"); 
+                      setShowMenu(false); 
+                               }}
+                      aria-pressed={activeType === "daily"}>
+                      Daily
+                    </button>
                    
                     <button 
                       type="button"

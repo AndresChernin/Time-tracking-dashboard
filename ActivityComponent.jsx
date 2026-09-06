@@ -15,7 +15,7 @@ function ActivityComponent({img_link, img_elli, title,color,
     return(
         <article className={`activity-part ${color}`}>
             <div className="activity-part-upper-part">
-               <img src={img_link} className="activity-img-part" alt="image of activity"/>
+               <img src={img_link} className="activity-img-part" alt=""/>
             </div>
             <div className="activity-part-lower-part">
               <div className="lower-part-inner-part">
@@ -37,7 +37,7 @@ function ActivityComponent({img_link, img_elli, title,color,
                          <img 
                             src={img_elli} 
                             className="ellipsis-part"  
-                            alt="image of ellipsis"
+                            alt=""
                            
                          />
                          </button>

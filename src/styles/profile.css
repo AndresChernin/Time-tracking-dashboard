@@ -68,12 +68,17 @@
 .blue-text{
   color:var(--component-hell-text-color);
 }
-.white-text{
-  color:white;
-}
+
 .person-part-button{
     font-weight: 400;
     font-size:22px;
+}
+.person-part-button.white-text{
+  color:white;
+  font-weight: 600;
+}
+.person-part-button:hover{
+    color:white;
 } 
 @media(min-width:1000px){
     .person-part{

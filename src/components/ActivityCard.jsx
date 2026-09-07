@@ -34,13 +34,20 @@ function ActivityCard({img_link, img_elli, title,color,
                           onClick={() => setShowMenu(!showMenu)}
                           aria-label={`Open ${title} activity menu`}
                           aria-expanded={showMenu}>
-                          
+                          <span className="ellipsis-part-new"
+                                style={{
+                                maskImage: `url(${img_elli})`,
+                                WebkitMaskImage: `url(${img_elli})`
+                             }}>
+
+                          </span>
+                         {/* 
                          <img 
                             src={img_elli} 
                             className="ellipsis-part"  
                             alt=""
                            
-                         />
+                         />*/}
                          </button>
 
                 {showMenu && (

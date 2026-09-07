@@ -57,6 +57,28 @@
 .ellipsis-part{
     cursor: pointer;
 }
+.ellipsis-part-new{
+    cursor:pointer;
+
+    display: block;
+    width: 2rem;
+    height:1.8rem;
+    
+
+    background-color: var(--component-hell-text-color);
+
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+}
+.ellipsis-button:hover .ellipsis-part-new {
+    background-color: white;
+}
+
 .menu-part{
     position:absolute;
     margin-top:0.5rem;
